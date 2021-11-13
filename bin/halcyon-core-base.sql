@@ -1022,6 +1022,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+DROP TABLE IF EXISTS `emailregistrations`;
 CREATE TABLE `emailregistrations` (
   `uuid` char(36) NOT NULL,
   `time` int(10) unsigned NOT NULL,
@@ -1030,6 +1031,7 @@ CREATE TABLE `emailregistrations` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `emailmessages`;
 CREATE TABLE `emailmessages` (
   `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uuid` char(36) NOT NULL,
@@ -1042,6 +1044,7 @@ CREATE TABLE `emailmessages` (
   KEY `sent` (`sent`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `asset_creators`;
 CREATE TABLE `asset_creators` (
   `assetId` varchar(36) NOT NULL,
   `creatorId` varchar(36) NOT NULL,
