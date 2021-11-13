@@ -554,12 +554,12 @@ namespace OpenSim.Data.MySQL
                 using (MySqlCommand cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = sql;
-                    cmd.Parameters.Add("?RegionID", telehub.RegionID.ToString());
-                    cmd.Parameters.Add("?TelehubLoc", telehub.TelehubLoc.ToString());
-                    cmd.Parameters.Add("?TelehubRot", telehub.TelehubRot.ToString());
-                    cmd.Parameters.Add("?ObjectUUID", telehub.ObjectUUID.ToString());
-                    cmd.Parameters.Add("?Spawns", telehub.BuildFromList(telehub.SpawnPos));
-                    cmd.Parameters.Add("?Name", telehub.Name);
+                    cmd.Parameters.Add(new MySqlParameter("?RegionID", telehub.RegionID.ToString()));
+                    cmd.Parameters.Add(new MySqlParameter("?TelehubLoc", telehub.TelehubLoc.ToString()));
+                    cmd.Parameters.Add(new MySqlParameter("?TelehubRot", telehub.TelehubRot.ToString()));
+                    cmd.Parameters.Add(new MySqlParameter("?ObjectUUID", telehub.ObjectUUID.ToString()));
+                    cmd.Parameters.Add(new MySqlParameter("?Spawns", telehub.BuildFromList(telehub.SpawnPos)));
+                    cmd.Parameters.Add(new MySqlParameter("?Name", telehub.Name));
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -579,7 +579,7 @@ namespace OpenSim.Data.MySQL
                 using (MySqlCommand cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = sql;
-                    cmd.Parameters.Add("?RegionID", regionID.ToString());
+                    cmd.Parameters.Add(new MySqlParameter("?RegionID", regionID.ToString()));
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -599,7 +599,7 @@ namespace OpenSim.Data.MySQL
                 using (MySqlCommand cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = sql;
-                    cmd.Parameters.Add("?RegionID", regionID.ToString());
+                    cmd.Parameters.Add(new MySqlParameter("?RegionID", regionID.ToString()));
                     using (IDataReader r = cmd.ExecuteReader())
                     {
                         if (r.Read())

@@ -14,7 +14,7 @@
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <OutputPath>../../../../bin/</OutputPath>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>
@@ -28,6 +28,7 @@
     </FileUpgradeFlags>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
