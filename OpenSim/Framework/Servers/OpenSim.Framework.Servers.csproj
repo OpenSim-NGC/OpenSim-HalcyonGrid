@@ -160,6 +160,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="VersionInfo.tt" />
     <None Include="packages.config" />
   </ItemGroup>

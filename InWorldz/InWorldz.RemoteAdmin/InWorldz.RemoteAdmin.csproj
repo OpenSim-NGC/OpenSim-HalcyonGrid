@@ -188,6 +188,9 @@
     <EmbeddedResource Include="Resources\InWorldz.RemoteAdmin.addin.xml">
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
